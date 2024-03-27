@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://b6btpnl7ayn8l"]
+
+[ext_resource type="Script" path="res://Dungeon_Floor.gd" id="1_finqp"]
+
+[node name="Dungeon_Floor" type="Node2D"]
+script = ExtResource("1_finqp")
+
+[node name="RoomMap" type="Node2D" parent="."]
