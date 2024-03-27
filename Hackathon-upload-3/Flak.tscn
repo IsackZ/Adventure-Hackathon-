@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://cg5sejor6xixe"]
+
+[ext_resource type="Texture2D" uid="uid://c7ckpyfa31rk8" path="res://assets/Sprites/Flak Animation.png" id="1_8dp3u"]
+
+[node name="Enemy" type="Area2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_8dp3u")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]

@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://cgo76jfsvnmof"]
+[gd_scene load_steps=7 format=3 uid="uid://cgo76jfsvnmof"]
 
 [ext_resource type="PackedScene" uid="uid://cqg6g2l005dpq" path="res://objects/top_down/tile_map_top_down.tscn" id="1_k32kk"]
 [ext_resource type="PackedScene" uid="uid://scx4pvikmslo" path="res://objects/top_down/main_character_top_down.tscn" id="2_flee6"]
 [ext_resource type="PackedScene" uid="uid://1nn7863upukw" path="res://objects/top_down/npc_top_down.tscn" id="3_ugqei"]
 [ext_resource type="PackedScene" uid="uid://bts7o71xejjwy" path="res://objects/top_down/collectable_top_down.tscn" id="4_bggbw"]
+[ext_resource type="PackedScene" uid="uid://gak11wt032g" path="res://TSCN/Scenes/slime.tscn" id="5_et0sw"]
 
 [sub_resource type="TileSet" id="TileSet_n0vll"]
 tile_size = Vector2i(32, 32)
@@ -26,3 +27,7 @@ position = Vector2(253, 154)
 
 [node name="Collectable" parent="." instance=ExtResource("4_bggbw")]
 position = Vector2(689, 243)
+
+[node name="slime" parent="." instance=ExtResource("5_et0sw")]
+position = Vector2(380, 100)
+collision_layer = 1
