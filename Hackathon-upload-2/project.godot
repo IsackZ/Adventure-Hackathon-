@@ -12,7 +12,7 @@ config_version=5
 
 config/name="Hackathon Starter Files"
 run/main_scene="res://main_scene_top_down.tscn"
-config/features=PackedStringArray("4.1", "Forward Plus")
+config/features=PackedStringArray("4.2", "Forward Plus")
 
 [autoload]
 

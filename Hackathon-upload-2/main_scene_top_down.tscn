@@ -1,9 +1,18 @@
-[gd_scene load_steps=6 format=3 uid="uid://cgo76jfsvnmof"]
+[gd_scene load_steps=15 format=3 uid="uid://cgo76jfsvnmof"]
 
 [ext_resource type="PackedScene" uid="uid://cqg6g2l005dpq" path="res://objects/top_down/tile_map_top_down.tscn" id="1_ovqdv"]
 [ext_resource type="PackedScene" uid="uid://scx4pvikmslo" path="res://objects/top_down/main_character_top_down.tscn" id="2_hr4rl"]
+[ext_resource type="Texture2D" uid="uid://b3u2j65nbjjn" path="res://assets/hp.png" id="3_gxdsd"]
 [ext_resource type="PackedScene" uid="uid://1nn7863upukw" path="res://objects/top_down/npc_top_down.tscn" id="3_nppey"]
 [ext_resource type="PackedScene" uid="uid://bts7o71xejjwy" path="res://objects/top_down/collectable_top_down.tscn" id="4_0tfit"]
+[ext_resource type="Script" path="res://hpbar.gd" id="4_v56ab"]
+[ext_resource type="Texture2D" uid="uid://dhbw3csbeijbu" path="res://assets/hpbar.png" id="5_s1va3"]
+[ext_resource type="Texture2D" uid="uid://cmphcud5xaqqq" path="res://assets/mana.png" id="6_v30h2"]
+[ext_resource type="Script" path="res://mana.gd" id="7_uxkif"]
+[ext_resource type="Texture2D" uid="uid://btfjtiv880211" path="res://assets/nrg.png" id="9_5ejx3"]
+[ext_resource type="Texture2D" uid="uid://bb801xrh6j17n" path="res://assets/manabar.png" id="10_pjlvr"]
+[ext_resource type="Script" path="res://nrg.gd" id="10_u2w15"]
+[ext_resource type="Texture2D" uid="uid://cgwo4yfcb68cg" path="res://assets/nrgbar.png" id="13_f7iba"]
 
 [sub_resource type="TileSet" id="TileSet_n0vll"]
 tile_size = Vector2i(32, 32)
@@ -28,8 +37,49 @@ limit_top = -5
 limit_right = 1071
 limit_bottom = 587
 
+[node name="hpbar" type="TextureProgressBar" parent="MainCharacter/Camera2D"]
+offset_left = -64.0
+offset_top = -37.0
+offset_right = -47.0
+offset_bottom = -34.0
+pivot_offset = Vector2(1, 1)
+value = 100.0
+texture_progress = ExtResource("3_gxdsd")
+script = ExtResource("4_v56ab")
+
+[node name="Hpbar" type="Sprite2D" parent="MainCharacter/Camera2D"]
+position = Vector2(-35, -36)
+texture = ExtResource("5_s1va3")
+offset = Vector2(0.5, 0.5)
+
+[node name="mana" type="TextureProgressBar" parent="MainCharacter/Camera2D"]
+offset_left = -64.0
+offset_top = -29.0
+offset_right = -45.0
+offset_bottom = -25.0
+value = 100.0
+texture_progress = ExtResource("6_v30h2")
+script = ExtResource("7_uxkif")
+
+[node name="Manabar" type="Sprite2D" parent="MainCharacter/Camera2D"]
+position = Vector2(-34.5, -27.5)
+texture = ExtResource("10_pjlvr")
+
+[node name="nrg" type="TextureProgressBar" parent="MainCharacter/Camera2D"]
+offset_left = -64.0
+offset_top = -21.0
+offset_right = -24.0
+offset_bottom = 19.0
+value = 100.0
+texture_progress = ExtResource("9_5ejx3")
+script = ExtResource("10_u2w15")
+
 [node name="NPC" parent="." instance=ExtResource("3_nppey")]
 position = Vector2(253, 154)
 
 [node name="Collectable" parent="." instance=ExtResource("4_0tfit")]
 position = Vector2(689, 243)
+
+[node name="Nrgbar" type="Sprite2D" parent="."]
+position = Vector2(154.5, 78.5)
+texture = ExtResource("13_f7iba")

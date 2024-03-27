@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://c3dag48b2cqx4"]
+[gd_scene load_steps=10 format=3 uid="uid://c3dag48b2cqx4"]
 
 [ext_resource type="Texture2D" uid="uid://bi0fd4pfd4bhl" path="res://assets/background_platformer.png" id="1_akcif"]
 [ext_resource type="Texture2D" uid="uid://d1cghciuogby3" path="res://assets/tileset.png" id="1_l3tbb"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://mspuarrltfuj" path="res://objects/platormer/collectable_platformer.tscn" id="3_j43rq"]
 [ext_resource type="PackedScene" uid="uid://m6l0t1svukiw" path="res://objects/platormer/npc_platformer.tscn" id="4_8x4s1"]
 [ext_resource type="Script" path="res://scripts/score_platformer.gd" id="4_h2tro"]
+[ext_resource type="Script" path="res://hpbar.gd" id="7_0ne02"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6gy3w"]
 texture = ExtResource("1_l3tbb")
@@ -393,3 +394,8 @@ position = Vector2(425, 38)
 
 [node name="NPC3" parent="." instance=ExtResource("4_8x4s1")]
 position = Vector2(1023, 86)
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("7_0ne02")
