@@ -30,4 +30,3 @@ position = Vector2(689, 243)
 
 [node name="slime" parent="." instance=ExtResource("5_et0sw")]
 position = Vector2(380, 100)
-collision_layer = 1

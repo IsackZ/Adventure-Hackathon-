@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=3 uid="uid://cv67bundtjx7e"]
+[gd_scene load_steps=29 format=3 uid="uid://cv67bundtjx7e"]
 
 [ext_resource type="Script" path="res://scripts/Room.gd" id="1_nnccw"]
 [ext_resource type="Texture2D" uid="uid://durl0hypum2d8" path="res://assets/TileMap/Shadow NW New.png" id="1_qqfm3"]
@@ -13,7 +13,6 @@
 [ext_resource type="Texture2D" uid="uid://7bmgyalxwj2m" path="res://assets/TileMap/Shadow SW New.png" id="10_drpsh"]
 [ext_resource type="Texture2D" uid="uid://dlim1kt606fb1" path="res://assets/TileMap/Shadow W New.png" id="11_52hvs"]
 [ext_resource type="Texture2D" uid="uid://dfxl1meqje0vf" path="res://assets/TileMap/TileMap v1.png" id="12_fo6fw"]
-[ext_resource type="PackedScene" uid="uid://gak11wt032g" path="res://TSCN/Scenes/slime.tscn" id="14_xrogi"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_w37kj"]
 texture = ExtResource("1_qqfm3")
@@ -368,6 +367,3 @@ layer_3/name = "Extras"
 layer_3/tile_data = PackedInt32Array()
 layer_4/name = "BuildingExtras"
 layer_4/tile_data = PackedInt32Array()
-
-[node name="slime" parent="." instance=ExtResource("14_xrogi")]
-position = Vector2(-2, -4)

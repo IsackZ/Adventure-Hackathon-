@@ -37,7 +37,9 @@ radius = 248.002
 radius = 12.0
 
 [node name="slime" type="CharacterBody2D"]
-collision_mask = 2
+z_index = 1
+collision_layer = 5
+collision_mask = 6
 script = ExtResource("1_s3vqf")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
